@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Surpresa Emanuely 💖</title>
+
+  <!-- Fontes -->
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --rosa-claro: #fde7ee;
+      --rosa-suave: #f7c1d9;
+      --vinho: #9c3a4b;
+      --texto: #5a2d2d;
+      --branco: rgba(255, 255, 255, 0.94);
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, var(--rosa-claro), #ffffff);
+      color: var(--texto);
+      overflow-x: hidden;
+    }
+
+    h1 {
+      font-family: 'Dancing Script', cursive;
+      font-size: clamp(2rem, 5vw, 2.6rem);
+      color: var(--vinho);
+      text-align: center;
+    }
+
+    .container {
+      display: flex;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      height: 100dvh;
+      scroll-behavior: smooth;
+    }
+
+    .page {
+      flex: 0 0 100%;
+      scroll-snap-align: start;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 32px 16px;
+      text-align: center;
+    }
+
+    .content {
+      background: var(--branco);
+      backdrop-filter: blur(10px);
+      border-radius: 22px;
+      padding: 28px;
+      max-width: 850px;
+      width: 100%;
+      box-shadow: 0 10px 30px rgba(156, 58, 75, 0.18);
+    }
+
+    .content img {
+      width: 100%;
+      max-width: 420px;
+      border-radius: 18px;
+      margin-bottom: 18px;
+      box-shadow: 0 6px 18px rgba(0,0,0,.15);
+    }
+
+    .content p {
+      font-size: 1.05rem;
+      line-height: 1.8;
+    }
+
+    /* Botões */
+    .btn {
+      margin-top: 24px;
+      padding: 14px 34px;
+      font-size: 1rem;
+      border: none;
+      border-radius: 999px;
+      background: linear-gradient(135deg, var(--rosa-suave), var(--vinho));
+      color: white;
+      cursor: pointer;
+      transition: transform .3s ease, box-shadow .3s ease;
+      box-shadow: 0 8px 20px rgba(156,58,75,.35);
+    }
+
+    .btn:hover {
+      transform: scale(1.05);
+      box-shadow: 0 12px 28px rgba(156,58,75,.45);
+    }
+
+    /* Corações */
+    .hearts {
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      overflow: hidden;
+      z-index: 0;
+    }
+
+    .heart {
+      position: absolute;
+      bottom: -10px;
+      font-size: 20px;
+      color: var(--rosa-suave);
+      animation: floatUp linear infinite;
+      opacity: .5;
+    }
+
+    @keyframes floatUp {
+      from { transform: translateY(0); opacity: 0; }
+      10% { opacity: .6; }
+      to { transform: translateY(-110vh); opacity: 0; }
+    }
+
+    .container::-webkit-scrollbar { display: none; }
+  </style>
+</head>
+<body>
+
+<!-- Corações -->
+<div class="hearts">
+  <span class="heart" style="left:10%;animation-duration:12s;">♥</span>
+  <span class="heart" style="left:30%;animation-duration:15s;">♥</span>
+  <span class="heart" style="left:50%;animation-duration:11s;">♥</span>
+  <span class="heart" style="left:70%;animation-duration:14s;">♥</span>
+  <span class="heart" style="left:90%;animation-duration:16s;">♥</span>
+</div>
+
+<div class="container" id="container">
+
+  <!-- Página inicial -->
+  <section class="page">
+    <div class="content">
+      <h1>Para Emanuely 💖</h1>
+      <p>
+        Preparei algo simples, mas feito com carinho.<br>
+        Uma surpresa só para você.
+      </p>
+      <button class="btn" onclick="irPara(1)">Iniciar Surpresa ✨</button>
+    </div>
+  </section>
+
+  <!-- Conteúdo -->
+  <section class="page">
+    <h1>Maravilhosa 💖</h1>
+    <div class="content">
+      <img src="https://i.imgur.com/BB7uyqu.jpeg">
+      <p>Emanuely, tudo em você transmite leveza.</p>
+    </div>
+  </section>
+
+  <section class="page">
+    <h1>Estudiosa 📚</h1>
+    <div class="content">
+      <img src="https://i.imgur.com/WuSmzrq.jpeg">
+      <p>Seu esforço é silencioso, mas inspirador.</p>
+    </div>
+  </section>
+
+  <section class="page">
+    <h1>Dedicada 🌷</h1>
+    <div class="content">
+      <img src="https://i.imgur.com/xtLH6AK.jpeg">
+      <p>Cada detalhe feito por você carrega cuidado.</p>
+    </div>
+  </section>
+
+  <section class="page">
+    <h1>Coincidência? ✨</h1>
+    <div class="content">
+      <img src="https://i.imgur.com/QWIK41Q.jpeg">
+      <p>Algumas pessoas chegam sem aviso.</p>
+    </div>
+  </section>
+
+  <section class="page">
+    <h1>🤍 Emanuely 🤍</h1>
+    <div class="content">
+      <img src="https://i.imgur.com/eMh7aaP.jpeg">
+      <p>Você é especial de um jeito raro.</p>
+    </div>
+  </section>
+
+  <!-- Página final -->
+  <section class="page">
+    <div class="content">
+      <h1>Gostou? 💕</h1>
+      <p>
+        Se quiser sentir tudo de novo,<br>
+        é só recomeçar.
+      </p>
+      <button class="btn" onclick="irPara(0)">Recomeçar 🔄</button>
+    </div>
+  </section>
+
+</div>
+
+<script>
+  function irPara(indice) {
+    const container = document.getElementById("container");
+    container.scrollTo({
+      left: container.clientWidth * indice,
+      behavior: "smooth"
+    });
+  }
+</script>
+
+</body>
+</html>
